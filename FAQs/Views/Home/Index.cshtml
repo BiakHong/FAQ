@@ -44,8 +44,12 @@
             @foreach (FAQ faq in Model)
             {
                 <li class="list-group-item">
-                    <div class="row"><span class="fw-bold">@faq.Question</span></div>
-                    <div class="row"><span>@faq.Answer</span></div>
+                    <div><span class="fw-bold">@faq.Question</span> <span>@faq.Answer</span></div>
+                    <div class="row mt-4">
+                        <div class="col-5"> <span>Topic: @faq.Topic.TopicName</span></div>
+                        <div class="col-5"> <span>Category: @faq.Category.CategoryName</span></div>
+                    </div>
+                    
                 </li>
             }
         </ul>
